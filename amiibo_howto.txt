@@ -1,0 +1,17 @@
+The amiibo bin to hex dump website is located here: 
+https://games.kel.mn/amiibo 
+
+How to create an amiibo:
+1. Connect the arduino to the mac and open the arduino software
+2. Open the Dump Info sketch and upload it to the RFID writer.
+  If it cannot connect to the RFID writer then under the toolbar on the top of the screen,
+  select tools > port > /dev/cu.usbmodem14101 (Arduino Uno)
+3. Under the toolbar select tools > serial monitor to see the output from the RFID scanner
+4. This sketch should make it so you can just put your tag on the RFID reader to get the card Info
+5. Download the amiibo bin that you want at my google drive (Shared with me > amiibo bins, or just search
+amiibo on google drive and it should find it)
+6. Next, go to the amiibo bin to hex dump website (https://games.kel.mn/amiibo) and paste in the UID you got from
+the Dump Info sketch, the amiibo bin and the key file (located in this directory which should be projects/amiibo)
+7. Copy the hex dump from the website and go to the Arduino Write amiibo sketch and paste it in the dataBlock[] array
+8. Upload the Write amiibo sketch to the Arduino
+9. Follow instructions in the serial window (should just tell you when to put the tag on then watch it go)
